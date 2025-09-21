@@ -1,6 +1,6 @@
 # Website-FSJ-
 
-This README file provides a brief overview of the Website-FSJ- project.
+This README file provides a overview of the Website-FSJ- project.
 
 Team Members:
 
