@@ -13,7 +13,9 @@
 }
 /* Global */
 body {
+  background: #111;
   color: #e50914;
+  scroll-behavior: smooth;
 }
 
 /* Header */
