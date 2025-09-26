@@ -13,10 +13,7 @@
 }
 /* Global */
 body {
-  font-family: "Poppins", sans-serif;
-  background: #141414;
-  color: #f5f5f5;
-  overflow-x: hidden;
+  color: #e50914;
 }
 
 /* Header */
@@ -34,14 +31,6 @@ body {
 .logo {
   width: 60px;
   border-radius: 8px;
-}
-
-.brand {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #e50914;
-  margin-left: 10px;
-  flex: 1;
 }
 
 /* Auth Buttons */
@@ -301,5 +290,38 @@ footer {
 .movie-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+}
+
+/* Animated MovieMafia Heading Styles */
+.animated-heading-bg {
+  background: black;
+  overflow: hidden;
+}
+
+/* Animation styles for MovieMafia heading */
+#animated-text {
+  cursor: pointer;
+  font-family: 'Teko', sans-serif;
+}
+.letter-span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.letter-span.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.letter-span.waving {
+  transition: none;
+}
+
+.letter-span.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.letter-span.waving {
+  transition: none;
 }
 

@@ -1,7 +1,50 @@
-// Show image
-function showImage() {
-  document.getElementById("myImage").style.display = "block";
-}
+// Animated MovieMafia Heading Script
+document.addEventListener('DOMContentLoaded', () => {
+  const textElement = document.getElementById('animated-text');
+  if (!textElement) return;
+  const text = textElement.textContent;
+  textElement.textContent = '';
+  const spans = text.split('').map(char => {
+    const span = document.createElement('span');
+    span.className = 'letter-span';
+    span.textContent = char;
+    textElement.appendChild(span);
+    return span;
+  });
+  const FADE_IN_DELAY = 100;
+  spans.forEach((span, i) => {
+    setTimeout(() => {
+      span.classList.add('visible');
+    }, i * FADE_IN_DELAY);
+  });
+  const totalFadeInDuration = (spans.length - 1) * FADE_IN_DELAY + 600;
+  setTimeout(() => {
+    spans.forEach(span => span.classList.add('waving'));
+    let time = 0;
+    let waveAmplitude = 8;
+    const targetAmplitude = { current: waveAmplitude };
+    textElement.addEventListener('mouseenter', () => {
+      targetAmplitude.current = 15;
+    });
+    textElement.addEventListener('mouseleave', () => {
+      targetAmplitude.current = 8;
+    });
+    // --- SMOOTH WAVE: Use phase offset and easing for smoothness ---
+    const phaseOffset = Math.PI / 10; // smooths the wave between letters
+    function waveAnimation() {
+      waveAmplitude += (targetAmplitude.current - waveAmplitude) * 0.1;
+      spans.forEach((span, i) => {
+        // Use a cosine for a smoother start/end, and add a phase offset
+        const yOffset = Math.sin(time + i * phaseOffset) * waveAmplitude;
+        // Also apply a little easing for smoothness
+        span.style.transform = `translateY(${yOffset.toFixed(10)}px)`;
+      });
+      time += 0.05;
+      requestAnimationFrame(waveAnimation);
+    }
+    waveAnimation();
+  }, totalFadeInDuration);
+});
 
 // Toggle menu
 const hamburger = document.getElementById("hamburger");
