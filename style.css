@@ -327,3 +327,11 @@ footer {
 .letter-span.waving {
   transition: none;
 }
+.Exp7-btn {
+  background: #e50914;
+  color: #fff;
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+}
