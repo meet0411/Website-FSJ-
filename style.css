@@ -146,21 +146,6 @@ body {
   border-radius: 6px;
 }
 
-/* Content */
-.content {
-  padding: 40px 20px;
-  text-align: center;
-}
-#myImage {
-  display: none;
-  width: 200px;
-  margin-top: 10px;
-}
-.movie-text {
-  margin-top: 10px;
-  font-style: italic;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -295,17 +280,8 @@ footer {
   box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
 }
 
-/* Animated MovieMafia Heading Styles */
-.animated-heading-bg {
-  background: black;
-  overflow: hidden;
-}
 
 /* Animation styles for MovieMafia heading */
-#animated-text {
-  cursor: pointer;
-  font-family: 'Teko', sans-serif;
-}
 .letter-span {
   display: inline-block;
   opacity: 0;
@@ -320,13 +296,6 @@ footer {
   transition: none;
 }
 
-.letter-span.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.letter-span.waving {
-  transition: none;
-}
 .Exp7-btn {
   background: #e50914;
   color: #fff;
@@ -350,20 +319,4 @@ footer {
 @media (min-width: 768px) {
     .md\:text-9xl { font-size: 8rem; line-height: 1; }
 }
-
 .tracking-wider { letter-spacing: 0.05em; }
-.letter-span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.letter-span.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.letter-span.waving {
-    transition: none;
-}
