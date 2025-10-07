@@ -12,11 +12,13 @@
   <script>
     // Array of colors to use
     let i;
-    const colors = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lightgray" , "lightrose"];
+    const colors = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lightgray" , "mistyrose"];
+    const colortext=["#003366", "#004d00", "#660033", "#666600", "#333333", "#663344"]
     let index = 0;
     // Function to change background color
     function changeColor() {
       document.body.style.backgroundColor = colors[index]; // Change color
+      document.body.style.color = colortext[index];
       index = (index + 1) % colors.length; // Move to next color
     }
     // Change color every 2.5 seconds
