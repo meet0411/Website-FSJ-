@@ -4,6 +4,8 @@
 
 ---
 
+![screenshots](images/Capture.PNG)
+
 ## About the Project
 
 **MovieMafia.in** is a Netflix-inspired static website that simulates a movie streaming platform. It features a responsive layout, animated UI elements, a movie showcase grid, user authentication modals (Login & Sign Up), and a movie search bar. The project demonstrates front-end web development skills including DOM manipulation, form validation, and responsive design.
